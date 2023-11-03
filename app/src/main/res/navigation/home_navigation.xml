@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.app.todo.Presentation.Fragments.BuyFragment"
+        android:label="BuyFragment" />
+    <fragment
+        android:id="@+id/callFragment"
+        android:name="com.app.todo.Presentation.Fragments.CallFragment"
+        android:label="CallFragment" />
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.app.todo.Presentation.Fragments.SellFragment"
+        android:label="SellFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.todo.Presentation.Fragments.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_callFragment"
+            app:destination="@id/callFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sellFragment"
+            app:destination="@id/sellFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_buyFragment"
+            app:destination="@id/buyFragment" />
+    </fragment>
+
+</navigation>
