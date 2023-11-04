@@ -46,18 +46,19 @@ class BuySellItemViewModel @Inject constructor(
     fun getBuyItems() {
         viewModelScope.launch {
             _buy.postValue(Resource.Loading())
-            repository.getAllBuyItems().run {
-                try {
+            try {
+                repository.getAllBuyItems().run {
+
                     if (this.isSuccessful) {
                         addSellItem(this.body() ?: arrayListOf())
                         _buy.postValue(Resource.Success(this.body() ?: listOf()))
                     } else {
                         _buy.postValue(Resource.Error(this.message().toString()))
                     }
-                }catch (e:Exception){
-                    _buy.postValue(Resource.Error(e.message ?: "Unknown Error"))
-
                 }
+            } catch (e: Exception) {
+                _buy.postValue(Resource.Error(e.message ?: "Unknown Error"))
+
             }
         }
     }
@@ -66,17 +67,18 @@ class BuySellItemViewModel @Inject constructor(
         viewModelScope.launch {
 
             _buy.postValue(Resource.Loading())
-            repository.getAllBuyItems().run {
-                try {
+            try {
+                repository.getAllBuyItems().run {
+
 
                     if (this.isSuccessful) {
                         _buy.postValue(Resource.Success(this.body() ?: listOf()))
                     } else {
                         _buy.postValue(Resource.Error(this.message().toString()))
                     }
-                } catch (e: Exception) {
-                    _buy.postValue(Resource.Error(e.message ?: "Unknown Error"))
                 }
+            } catch (e: Exception) {
+                _buy.postValue(Resource.Error(e.message ?: "Unknown Error"))
             }
         }
     }
@@ -86,17 +88,20 @@ class BuySellItemViewModel @Inject constructor(
             removeSellItem()
             getBuyItems()
             _buy.postValue(Resource.Loading())
-            repository.getAllBuyItems().run {
-                try {
+            try {
+
+
+                repository.getAllBuyItems().run {
+
                     if (this.isSuccessful) {
                         _buy.postValue(Resource.Success(this.body() ?: listOf()))
                     } else {
                         _buy.postValue(Resource.Error(this.message().toString()))
                     }
-                } catch (e: Exception) {
-                    _buy.postValue(Resource.Error(e.message ?: "Unknown Error"))
 
                 }
+            } catch (e: Exception) {
+                _buy.postValue(Resource.Error(e.message ?: "Unknown Error"))
             }
         }
     }

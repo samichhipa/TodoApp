@@ -1,28 +1,15 @@
-package com.app.todo
+package com.app.todo.presentation.activity
 
-import android.graphics.Color
-import android.graphics.ColorFilter
-import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.graphics.BlendModeColorFilterCompat
-import androidx.core.graphics.BlendModeCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.app.todo.Base.BaseActivity
+import com.app.todo.R
 import com.app.todo.ViewModels.BuySellItemViewModel
-import com.app.todo.ViewModels.CallsViewModel
 import com.app.todo.databinding.ActivityMainBinding
-import com.app.todo.presentation.fragments.BuyFragment
-import com.app.todo.presentation.fragments.CallFragment
-import com.app.todo.presentation.fragments.HomeFragment
-import com.app.todo.presentation.fragments.SellFragment
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.WithFragmentBindings
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

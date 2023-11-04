@@ -5,16 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.app.todo.MainActivity
-import com.app.todo.ViewModels.BuySellItemViewModel
-import com.app.todo.ViewModels.CallsViewModel
+import com.app.todo.presentation.activity.MainActivity
 import com.app.todo.databinding.FragmentSellBinding
 import com.app.todo.models.response.Item
 import com.app.todo.presentation.fragments.Adapters.ItemsAdapter

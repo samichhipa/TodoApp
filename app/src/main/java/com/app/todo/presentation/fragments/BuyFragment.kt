@@ -5,18 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.app.todo.MainActivity
-import com.app.todo.ViewModels.BuySellItemViewModel
-import com.app.todo.ViewModels.BuyViewModel
-import com.app.todo.ViewModels.CallsViewModel
+import com.app.todo.presentation.activity.MainActivity
 import com.app.todo.databinding.FragmentBuyBinding
-import com.app.todo.databinding.FragmentCallBinding
 import com.app.todo.models.Resource
 import com.app.todo.models.response.Item
-import com.app.todo.presentation.fragments.Adapters.CallsAdapter
 import com.app.todo.presentation.fragments.Adapters.ItemsAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
