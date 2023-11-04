@@ -1,9 +1,6 @@
 package com.app.todo.Domain.Repository.Repositories
 
-import androidx.lifecycle.LiveData
-import com.app.todo.Models.Resource
-import com.app.todo.Models.Response.Calls
-import com.app.todo.Models.Response.Item
+import com.app.todo.models.response.Calls
 import retrofit2.Response
 
 interface CallsRepository {

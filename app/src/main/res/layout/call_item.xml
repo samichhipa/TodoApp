@@ -3,31 +3,42 @@
 
     <data>
 
-        <import type="com.app.todo.Models.Response.Calls" />
+        <import type="com.app.todo.models.response.Calls" />
 
         <variable
-            name="model"
+            name="call"
             type="Calls" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{model.name}"
-            android:textSize="14dp" />
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{model.number}"
-            android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Name:     "+call.name}'
+                android:textSize="14dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Number:     "+call.number}'
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
     </LinearLayout>
 
 

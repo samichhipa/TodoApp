@@ -3,42 +3,56 @@
 
     <data>
 
-        <import type="com.app.todo.Models.Response.Item" />
+        <import type="com.app.todo.models.response.Item" />
 
         <variable
-            name="model"
+            name="item"
             type="Item" />
     </data>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text='@{"Name: "+model.name}'
-            android:textSize="14dp" />
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text='@{"Price: "+model.price.toString()}'
-            android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Name:     "+item.name}'
+                android:textSize="14dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text='@{"Quantity: "+model.quantity.toString()}'
-            android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Price:     "+item.price.toString()}'
+                android:textSize="14dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text='@{"Type: "+model.type.toString()}'
-            android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Quantity:     "+item.quantity.toString()}'
+                android:textSize="14dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Type:     "+item.type.toString()}'
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
     </LinearLayout>
+
 
 </layout>

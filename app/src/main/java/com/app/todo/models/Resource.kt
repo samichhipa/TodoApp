@@ -1,4 +1,4 @@
-package com.app.todo.Models
+package com.app.todo.models
 
 
 sealed class Resource<T>(

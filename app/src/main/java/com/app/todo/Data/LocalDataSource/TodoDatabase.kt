@@ -1,12 +1,11 @@
 package com.app.todo.DataSource.LocalDataSource
 
-import android.provider.CallLog
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.app.todo.Models.Response.Item
+import com.app.todo.models.response.Item
 
 @Database(
-    entities = [Item::class, CallLog.Calls::class],
+    entities = [Item::class],
     version = 1
 )
 abstract class TodoDatabase : RoomDatabase() {

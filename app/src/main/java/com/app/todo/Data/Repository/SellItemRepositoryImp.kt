@@ -3,10 +3,10 @@ package com.app.todo.DataSource.LocalDataSource.Repository
 import androidx.lifecycle.LiveData
 import com.app.todo.DataSource.LocalDataSource.TodoDao
 import com.app.todo.Domain.Repository.Repositories.SellItemRepository
-import com.app.todo.Models.Response.Item
+import com.app.todo.models.response.Item
 
 class SellItemRepositoryImp(private val dao: TodoDao) : SellItemRepository {
-    override suspend fun addSellItem(item: Item) {
+    override suspend fun addSellItem(item: List<Item>) {
         dao.addSellItem(item)
     }
 
@@ -19,7 +19,7 @@ class SellItemRepositoryImp(private val dao: TodoDao) : SellItemRepository {
     }
 
 
-    override suspend fun removeItem(item: Item) {
-        return dao.remove(item)
+    override suspend fun removeAll() {
+        return dao.removeAll()
     }
 }

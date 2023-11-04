@@ -7,13 +7,13 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.app.todo.Models.Response.Item
+import com.app.todo.models.response.Item
 
 @Dao
 interface TodoDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addSellItem(item: Item)
+    suspend fun addSellItem(item: List<Item>)
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateSellItem(item: Item)
@@ -21,6 +21,6 @@ interface TodoDao {
     @Query("SELECT * FROM ItemToSell")
     fun getAllItems(): LiveData<List<Item>>
 
-    @Delete
-    suspend fun remove(item: Item)
+    @Query("DELETE FROM ItemToSell")
+    suspend fun removeAll()
 }

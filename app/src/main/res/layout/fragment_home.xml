@@ -2,16 +2,32 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Presentation.Fragments.HomeFragment">
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".presentation.fragments.HomeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/call_btn"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/call_lbl" />
 
-    </FrameLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buy_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/buy_lbl" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sell_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/sell_lbl" />
+    </LinearLayout>
 </layout>

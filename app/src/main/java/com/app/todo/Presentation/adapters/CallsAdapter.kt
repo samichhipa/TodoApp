@@ -1,23 +1,22 @@
-package com.app.todo.Presentation.Fragments.Adapters
+package com.app.todo.presentation.fragments.Adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.app.todo.Models.Response.Calls
-import com.app.todo.Models.Response.Item
+import com.app.todo.BR
+import com.app.todo.models.response.Calls
 import com.app.todo.databinding.CallItemBinding
-import com.app.todo.databinding.ItemBinding
 
-class ItemsAdapter(
-    var list: ArrayList<Item>? = arrayListOf(),
-) : RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
+class CallsAdapter(
+    var list: ArrayList<Calls>? = arrayListOf(),
+) : RecyclerView.Adapter<CallsAdapter.ViewHolder>() {
 
-    inner class ViewHolder(val binding: ItemBinding) :
+    inner class ViewHolder(val binding: CallItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            ItemBinding.inflate(
+            CallItemBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
             )
         )
@@ -26,7 +25,7 @@ class ItemsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = list!![position]
 
-        holder.binding.model = data
+        holder.binding.setVariable(BR.call,data)
 
     }
 

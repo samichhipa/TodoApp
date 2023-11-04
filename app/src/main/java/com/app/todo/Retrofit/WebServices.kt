@@ -1,8 +1,7 @@
 package com.app.todo.Retrofit
 
-import android.telecom.Call
-import com.app.todo.Models.Response.Calls
-import com.app.todo.Models.Response.Item
+import com.app.todo.models.response.Calls
+import com.app.todo.models.response.Item
 import retrofit2.Response
 
 import retrofit2.http.GET

@@ -1,4 +1,4 @@
-package com.app.todo.Models.Response
+package com.app.todo.models.response
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -6,20 +6,20 @@
 
     <fragment
         android:id="@+id/buyFragment"
-        android:name="com.app.todo.Presentation.Fragments.BuyFragment"
-        android:label="BuyFragment" />
+        android:name="com.app.todo.presentation.fragments.BuyFragment"
+        android:label="@string/buy_lbl" />
     <fragment
         android:id="@+id/callFragment"
-        android:name="com.app.todo.Presentation.Fragments.CallFragment"
-        android:label="CallFragment" />
+        android:name="com.app.todo.presentation.fragments.CallFragment"
+        android:label="@string/call_lbl" />
     <fragment
         android:id="@+id/sellFragment"
-        android:name="com.app.todo.Presentation.Fragments.SellFragment"
-        android:label="SellFragment" />
+        android:name="com.app.todo.presentation.fragments.SellFragment"
+        android:label="@string/sell_lbl" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.app.todo.Presentation.Fragments.HomeFragment"
-        android:label="HomeFragment">
+        android:name="com.app.todo.presentation.fragments.HomeFragment"
+        android:label="@string/home_lbl">
         <action
             android:id="@+id/action_homeFragment_to_callFragment"
             app:destination="@id/callFragment" />
